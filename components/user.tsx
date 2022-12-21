@@ -8,7 +8,7 @@ export const User = ({session}: Session) => {
       <Avatar
         bg='#fd5b32'
         icon={<IoSkullOutline fontSize='1.5rem' />}
-        src={session.user.image}
+        src={typeof session.user.image === 'string' ? session.user.image : ''}
       />
       <Box ml='4'>
         <Text fontWeight='bold'>

@@ -1,6 +1,7 @@
-export interface Session {
-  session: {
-    expires: string
+import NextAuth from 'next-auth'
+
+declare module 'next-auth' {
+  interface Session {
     user: {
       email: string
       image?: string | null
